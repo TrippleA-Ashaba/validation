@@ -1,5 +1,5 @@
 const userName = document.querySelector("#username");
-const email = document.querySelector("#email");
+const emailEl = document.querySelector("#email");
 const password = document.querySelector("#password");
 const confirmPwd = document.querySelector("#confirm-password");
 const form = document.querySelector("#signup");
@@ -46,6 +46,18 @@ const checkFirstName = () => {
 	let first_name = firstName.value.trim();
 	let alphabet = /^[A-Za-z]+$/;
 
+	if (first_name === "") {
+		alert("First Name should not be blank!");
+		firstName.style.border = "3px solid red";
+		return false;
+	}
+
+	if (first_name.length < min || first_name.length > max) {
+		alert("First name cannot be less than 3 chars or more than 25 chars");
+		firstName.style.border = "3px solid red";
+		return false;
+	}
+
 	if (first_name.match(alphabet)) {
 		telephone.focus();
 		console.log(first_name);
@@ -53,6 +65,26 @@ const checkFirstName = () => {
 	} else {
 		firstName.style.border = "3px solid red";
 		alert("First Name has to be alphabetical");
+		return false;
+	}
+};
+
+// Checking Email
+const checkEmail = () => {
+	let email = emailEl.value;
+	let alpha_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+	if (email == "") {
+		alert("Email can't be left empty");
+		emailEl.style.border = "3px solid red";
+		return false;
+	}
+	if (email.match(alpha_email)) {
+		password.focus();
+		return true;
+	} else {
+		emailEl.style.border = "3px solid red";
+		alert("Put Valid Email");
 		return false;
 	}
 };
