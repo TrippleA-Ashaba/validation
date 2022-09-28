@@ -1,6 +1,6 @@
 const userName = document.registration.username;
 const emailEl = document.registration.email;
-const telephone = document.registration.phonenumber;
+const phone = document.registration.phonenumber;
 const gender = document.registration.gender;
 const engLang = document.registration.english;
 const lugLang = document.registration.luganda;
