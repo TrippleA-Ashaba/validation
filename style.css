@@ -30,7 +30,7 @@ body {
 	padding: 1em;
 	border-radius: 5px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-	width: 400px;
+	width: 500px;
 }
 
 /* **************** form ******************/
@@ -80,6 +80,33 @@ body {
 	color: var(--error-color);
 }
 
+.form-field select {
+	border: solid 2px #f0f0f0;
+	background-color: #fae8e944;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 5px;
+	font-size: 14px;
+	display: block;
+	width: 100%;
+}
+
+.form-field select:focus {
+	outline: none;
+}
+
+.form-field.error select {
+	border-color: var(--error-color);
+}
+
+.form-field.success select {
+	border-color: var(--success-color);
+}
+
+.form-field small {
+	color: var(--error-color);
+}
+
 /********************* button **********************/
 .btn {
 	width: 100%;
@@ -101,4 +128,9 @@ body {
 
 .btn:focus {
 	outline: none;
+}
+
+/* Radio */
+.radio {
+	display: flex;
 }
