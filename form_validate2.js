@@ -32,7 +32,7 @@ const checkPhone = () => {
 
 // check email
 const checkEmail = () => {
-	let emailreg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	let emailreg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})*(\.\w{2,3})+$/;
 	// check if phone is empty
 	if (email.value === "") {
 		email.style.border = "3px solid red";
